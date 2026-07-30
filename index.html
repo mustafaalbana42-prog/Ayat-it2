@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مِعمار | Mimar Luxury Design Hub</title>
+    <!-- ملف الـ CSS المحلي الخاص بكِ فقط (أوفلاين) -->
+</head>
+<style>
+    /* ==========================================================================
+   MIMAR CLASSIC LUXURY THEME (Night-Gold Edition)
+   100% Local & Offline - Complete Vanilla CSS Replacement for Bootstrap
+   ========================================================================== */
+
+/* --- RESET & BASE STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f141c;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* --- GRID SYSTEM & LAYOUT --- */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.g-4 > [class*="col-"] {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-bottom: 24px;
+}
+
+.col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .border-end-md {
+        border-left: 1px solid #2a384c !important; /* للغات RTL الشاشات تحول المفهوم */
+    }
+}
+
+/* --- FLEX UTILITIES --- */
+.d-flex { display: flex !important; }
+.justify-content-between { justify-content: space-between !important; }
+.align-items-center { align-items: center !important; }
+.flex-column { flex-direction: column !important; }
+.flex-grow-1 { flex-grow: 1 !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.gap-2 { gap: 8px !important; }
+
+/* --- MARGINS & PADDINGS --- */
+.my-3 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.my-4 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+.my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mb-5 { margin-bottom: 3rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.px-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.px-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.py-2 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+.py-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.pb-2 { padding-bottom: 0.5rem !important; }
+.mx-auto { margin-right: auto !important; margin-left: auto !important; }
+
+/* --- TYPOGRAPHY & TEXT --- */
+.text-center { text-align: center !important; }
+.fw-bold { font-weight: 700 !important; }
+.gold-title { color: #c5a059 !important; }
+.text-light { color: #f8f9fa !important; }
+.text-dark { color: #0f141c !important; }
+.text-muted { color: #94a3b8 !important; }
+.text-warning { color: #fbbf24 !important; }
+.text-success { color: #34d399 !important; }
+.text-info { color: #38bdf8 !important; }
+.text-slate { color: #e2e8f0 !important; }
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.opacity-75 { opacity: 0.75; }
+.opacity-90 { opacity: 0.90; }
+.opacity-25 { opacity: 0.25; }
+.small { font-size: 0.875rem; }
+.fs-5 { font-size: 1.25rem !important; }
+.fs-6 { font-size: 1rem !important; }
+.display-5 { font-size: 2.5rem; font-weight: 700; }
+.lead { font-size: 1.15rem; font-weight: 300; }
+
+code {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* --- NAVBAR --- */
+.navbar-luxury {
+    background: linear-gradient(135deg, #161e2e 0%, #0f141c 100%);
+    border-bottom: 2px solid #c5a059;
+    padding: 15px 0;
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c5a059;
+    text-decoration: none;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+.btn-sm { padding: 0.25rem 0.6rem; font-size: 0.85rem; }
+.btn-lg { padding: 0.75rem 1.5rem; font-size: 1.1rem; }
+
+.btn-gold {
+    background: linear-gradient(135deg, #c5a059 0%, #9e7d3b 100%);
+    color: #0f141c;
+}
+.btn-gold:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+    box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: #c5a059;
+    border-color: #c5a059;
+}
+.btn-outline-gold:hover {
+    background: #c5a059;
+    color: #0f141c;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    color: #cbd5e1;
+    border-color: #475569;
+}
+.btn-outline-dark:hover {
+    background: #475569;
+    color: #ffffff;
+}
+.rounded-pill { border-radius: 50rem !important; }
+
+/* --- CARDS & PANELS --- */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #182232;
+    border: 1px solid #2a384c;
+    border-radius: 12px;
+}
+.bg-white { background-color: #182232 !important; } /* تحويل الكروت الداكنة للثيم */
+.shadow-sm { box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important; }
+.shadow { box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important; }
+.border-0 { border: 0 !important; }
+.rounded-3 { border-radius: 12px !important; }
+.h-100 { height: 100% !important; }
+
+.design-card {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.design-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- BADGES --- */
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 4px;
+}
+.bg-dark { background-color: #0f141c !important; }
+.bg-secondary { background-color: #334155 !important; color: #f8f9fa; }
+.bg-warning { background-color: #f59e0b !important; }
+
+.badge-luxury {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(15, 20, 28, 0.85);
+    color: #c5a059;
+    border: 1px solid #c5a059;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+}
+
+/* --- LISTS & GROUPS --- */
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 6px;
+}
+.list-group-flush > .list-group-item {
+    border-width: 0 0 1px;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #0f141c !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #2a384c;
+}
+
+/* --- OTHER ELEMENTS --- */
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: #2a384c;
+    border: 0;
+    height: 1px;
+}
+.border-bottom { border-bottom: 1px solid #2a384c !important; }
+.border { border: 1px solid #2a384c !important; }
+.rounded-2 { border-radius: 6px !important; }
+
+footer {
+    background-color: #161e2e !important;
+    border-top: 2px solid #c5a059 !important;
+}
+</style>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-luxury sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">🏛️ مِـعْـمَـار | MIMAR</a>
+            <div class="d-flex gap-2">
+                <a href="/request/new/" class="btn btn-gold btn-sm">طلب تصميم خاص ✨</a>
+                <a href="/my-projects/" class="btn btn-outline-gold btn-sm">طلباتي 📋</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <!-- Hero Section -->
+        <div class="hero-classic text-center mb-5">
+            <span class="text-uppercase tracking-wide text-light opacity-75 small">Studio & Interior Solutions</span>
+            <h1 class="display-5 fw-bold mt-2 mb-3">نصمّم لك <span class="gold-title">مساحات تفوق الخيال</span></h1>
+            <p class="lead text-light opacity-90 mx-auto" style="max-width: 650px;">
+                منصة استشارية متكاملة لتقديم أرقى المخططات المعمارية والتصاميم الداخلية وفق رؤية هندسية احترافية.
+            </p>
+            <div class="mt-4">
+                <a href="/request/new/" class="btn btn-gold btn-lg px-4 shadow">ابدأ مشروعك الآن 📐</a>
+            </div>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- قسم التكليف البرمجي (عرض نتائج Python View & OOP & Conditions) -->
+        <!-- ================================================================= -->
+        <div class="card shadow-sm p-4 mb-5 border-0 rounded-3 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h4 class="fw-bold gold-title mb-0">📊 معالجة التكليف البرمجي (Django Views & OOP)</h4>
+                <!-- تطبيق شرط [if المنفردة] للتحقق من الوقت وتغيير الثيم -->
+                <span class="badge bg-dark text-warning p-2 fs-6">
+                    {{ greeting }} (Theme: {{ theme_color }})
+                </span>
+            </div>
+           
+            <div class="row g-4">
+                <!-- بيانات الكلاس ودوال التحويل النصية -->
+                <div class="col-md-6 border-end-md">
+                    <h6 class="fw-bold text-dark mb-3 border-bottom pb-2">📦 بيانات الكائن (OOP Class Object) & دوال النص:</h6>
+                    <p class="mb-2"><strong>عنوان المشروع (strip + title):</strong> {{ project_title }}</p>
+                    <p class="mb-2"><strong>الطراز بـ (Upper):</strong> <span class="badge bg-secondary">{{ style_upper }}</span></p>
+                    <p class="mb-2"><strong>الطراز بـ (Lower):</strong> <code class="text-lowercase">{{ style_lower }}</code></p>
+                    <p class="mb-2"><strong>تعديل الطراز (replace):</strong> {{ formatted_style }}</p>
+                    <p class="mb-2"><strong>عدد حروف العنوان (len):</strong> {{ title_len }} حرفاً</p>
+                </div>
+
+                <!-- الأرقام والشروط المتنوعة -->
+                <div class="col-md-6">
+                    <h6 class="fw-bold text-dark mb-3 border-bottom pb-2">⚖️ الحسابات البرمجية & الشروط (If/Else/Elif):</h6>
+                    <p class="mb-2"><strong>المساحة المحسوبة (int + str):</strong> {{ area }}</p>
+                    <!-- شرط [if ... else] -->
+                    <p class="mb-2"><strong>تقييم المساحة (If/Else):</strong> <span class="text-info fw-bold">{{ space_type }}</span></p>
+                    <!-- شرط [if ... elif ... else] -->
+                    <p class="mb-2"><strong>فئة التكلفة (If/Elif/Else):</strong> <span class="badge bg-warning text-dark">{{ tier_category }}</span></p>
+                    <p class="mb-2"><strong>السعر الأساسي (float):</strong> ${{ cost }}</p>
+                    <p class="mb-2"><strong>السعر النهائي بعد الخصم:</strong> <strong class="text-success fs-5">${{ final_price }}</strong></p>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+
+            <div class="row g-4">
+                <!-- نتائج For Loop -->
+                <div class="col-md-6">
+                    <h6 class="fw-bold mb-3 text-dark">🔄 الخدمات المتاحة (تمت معالجتها عبر For Loop):</h6>
+                    <ul class="list-group list-group-flush border rounded-2">
+                        {% for s in services %}
+                            <li class="list-group-item bg-light text-dark py-2">✓ {{ s }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- نتائج While Loop -->
+                <div class="col-md-6">
+                    <h6 class="fw-bold mb-3 text-dark">⏳ جدول الأقساط المتوقعة (تم حسابه عبر While Loop):</h6>
+                    <ul class="list-group list-group-flush border rounded-2">
+                        {% for plan in installments %}
+                            <li class="list-group-item bg-light text-muted py-2">🔹 {{ plan }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ================================================================= -->
+
+        <!-- Section Title: معرض التصاميم -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h3 class="fw-bold text-slate mb-1">🏛️ معرض التصاميم المعتمدة</h3>
+                <p class="text-muted small mb-0">استلهم فكرتك من أحدث أعمالنا ومشاريعنا المعمارية</p>
+            </div>
+        </div>
+
+        <!-- Designs Grid (Inspiration Feed) -->
+        <div class="row g-4">
+           
+            <!-- Design Card 1 -->
+            <div class="col-md-4">
+                <div class="card design-card h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-luxury">تصميم مودرن</span>
+                        <img src="../../../imgs/aa.jpg" alt="صالون معيشة">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-2">توزيع إضاءة وصالة معيشة فاخرة</h5>
+                        <p class="text-muted small flex-grow-1">استغلال للمساحات المفتوحة مع دمج الألوان المحايدة والخشب الطبيعي لراحة بصرية.</p>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">📐 الميزانية: متوسطة</span>
+                            <a href="#" class="btn btn-sm btn-outline-dark px-3 rounded-pill">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Card 2 -->
+            <div class="col-md-4">
+                <div class="card design-card h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-luxury">نيوكلاسيك</span>
+                        <img src="../../../imgs/mm.jpg" alt="مطبخ عصري">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-2">مطبخ مفتوح بأسلوب نيوكلاسيك</h5>
+                        <p class="text-muted small flex-grow-1">تصميم بين البساطة والفخامة مع رخام كالاكاتا وإضاءة مخفية لإبراز التفاصيل.</p>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">📐 الميزانية: مرتفعة</span>
+                            <a href="#" class="btn btn-sm btn-outline-dark px-3 rounded-pill">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Card 3 -->
+            <div class="col-md-4">
+                <div class="card design-card h-100">
+                    <div class="card-img-wrapper">
+                        <span class="badge-luxury">استغلال مساحات</span>
+                        <img src="../../../imgs/ee.jpg" alt="غرفة نوم">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h5 class="fw-bold mb-2">جناح نوم رئيسي بألوان هادئة</h5>
+                        <p class="text-muted small flex-grow-1">تنسيق أثاث مخصص للغرف ذات المساحات الصغيرة مع وحدات تخزين مخفية.</p>
+                        <hr class="my-3 opacity-25">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-muted">📐 الميزانية: اقتصادية</span>
+                            <a href="#" class="btn btn-sm btn-outline-dark px-3 rounded-pill">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 text-center mt-5 border-top border-warning">
+        <div class="container">
+            <small class="opacity-75">© 2026 جميع الحقوق محفوظة | منصة مِعمار للاستشارات المعمارية والتصميم الداخلي</small>
+        </div>
+    </footer>
+
+</body>
+</html>
